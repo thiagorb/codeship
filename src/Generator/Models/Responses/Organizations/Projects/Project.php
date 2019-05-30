@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'uuid' => ['type' => '?string'],
+    'id' => ['type' => '?int'],
+    'name' => ['type' => '?string'],
+    'type' => ['type' => '?string'],
+    'repositoryUrl' => ['type' => '?string'],
+    'repositoryProvider' => ['type' => '?string'],
+    'authenticationUser' => ['type' => '?string'],
+    'organizationUuid' => ['type' => '?string'],
+    'sshKey' => ['type' => '?string'],
+    'aesKey' => ['type' => '?string'],
+    'createdAt' => ['type' => '?string'],
+    'updatedAt' => ['type' => '?string'],
+    'teamIds' => ['type' => '?int[]'],
+    'branchMatch' => ['type' => '?string'],
+    'branches' => ['type' => '?string[]'],
+    'buildOnPrOnly' => ['type' => '?bool'],
+    'setupCommands' => ['type' => '?string[]'],
+    'deploymentPipelines' => ['type' => '?\Codeship\Responses\Organizations\Projects\DeploymentPipeline[]'],
+    'environmentVariables' => ['type' => '?\Codeship\Responses\Organizations\Projects\EnvironmentVariable[]'],
+    'testPipelines' => ['type' => '?\Codeship\Responses\Organizations\Projects\TestPipeline[]'],
+    'notificationRules' => ['type' => '?\Codeship\Responses\Organizations\Projects\NotificationRule[]'],
+];

@@ -1,0 +1,23 @@
+{
+    "name": "thiagorb/codeship",
+    "description": "Client for accessing Codeship API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thiago Barcala",
+            "email": "thiago.barcala@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "GitLab\\Client\\": "output/gitlab/",
+            "Codeship\\": "src/",
+            "Codeship\\Client\\": "generated/"
+        }
+    },
+    "require-dev": {
+        "vimeo/psalm": "^3.0"
+    }
+}
