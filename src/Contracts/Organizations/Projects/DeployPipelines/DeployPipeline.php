@@ -1,10 +1,10 @@
 <?php
 
-namespace Codeship\Contracts\Organizations\Projects\DeployPipelines;
+namespace Thiagorb\Codeship\Contracts\Organizations\Projects\DeployPipelines;
 
-use Codeship\Responses\Organizations\Projects\DeployPipelines\Read;
-use Codeship\Responses\Organizations\Projects\DeployPipelines\Update;
-use Codeship\Responses\Organizations\Projects\DeployPipelines\Config;
+use Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Read;
+use Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Update;
+use Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config;
 
 interface DeployPipeline
 {

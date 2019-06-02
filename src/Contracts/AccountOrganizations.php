@@ -1,8 +1,8 @@
 <?php
 
-namespace Codeship\Contracts;
+namespace Thiagorb\Codeship\Contracts;
 
-use Codeship\Responses\Organizations\Organization;
+use Thiagorb\Codeship\Responses\Organizations\Organization;
 
 interface AccountOrganizations
 {

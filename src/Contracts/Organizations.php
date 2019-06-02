@@ -1,8 +1,8 @@
 <?php
 
-namespace Codeship\Contracts;
+namespace Thiagorb\Codeship\Contracts;
 
-use Codeship\Contracts\Organizations\Organization;
+use Thiagorb\Codeship\Contracts\Organizations\Organization;
 
 interface Organizations
 {

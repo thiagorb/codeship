@@ -1,13 +1,13 @@
 <?php
 
-namespace Codeship\Contracts\Organizations\Projects;
+namespace Thiagorb\Codeship\Contracts\Organizations\Projects;
 
-use Codeship\Contracts\Organizations\Projects\TestPipelines;
-use Codeship\Contracts\Organizations\Projects\DeployPipelines;
-use Codeship\Requests\Organizations\Projects\NotificationRule;
-use Codeship\Requests\Organizations\Projects\EnvironmentVariable;
-use Codeship\Responses\Organizations\Projects\Read;
-use Codeship\Responses\Organizations\Projects\Update;
+use Thiagorb\Codeship\Contracts\Organizations\Projects\TestPipelines;
+use Thiagorb\Codeship\Contracts\Organizations\Projects\DeployPipelines;
+use Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRule;
+use Thiagorb\Codeship\Requests\Organizations\Projects\EnvironmentVariable;
+use Thiagorb\Codeship\Responses\Organizations\Projects\Read;
+use Thiagorb\Codeship\Responses\Organizations\Projects\Update;
 
 interface Project
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeship\Contracts;
+namespace Thiagorb\Codeship\Contracts;
 
 interface Codeship
 {

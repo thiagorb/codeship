@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'project' => ['type' => '\Codeship\Responses\Organizations\Projects\Project'],
+    'project' => ['type' => '\Thiagorb\Codeship\Responses\Organizations\Projects\Project'],
 ];

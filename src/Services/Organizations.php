@@ -1,13 +1,13 @@
 <?php
 
-namespace Codeship\Services;
+namespace Thiagorb\Codeship\Services;
 
-use Codeship\Context;
-use ServiceGeneratorRuntime\ServiceContext;
-use Codeship\Organization as OrganizationModel;
-use Codeship\Client\Implementations\AccountOrganizations;
+use Thiagorb\Codeship\Context;
+use Thiagorb\ServiceGeneratorRuntime\ServiceContext;
+use Thiagorb\Codeship\Organization as OrganizationModel;
+use Thiagorb\Codeship\Client\Implementations\AccountOrganizations;
 
-class Organizations extends AccountOrganizations implements \Codeship\Contracts\AccountOrganizations
+class Organizations extends AccountOrganizations implements \Thiagorb\Codeship\Contracts\AccountOrganizations
 {
 	/**
 	 * @var Context

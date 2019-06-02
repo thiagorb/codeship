@@ -1,15 +1,15 @@
 <?php
 
-namespace Codeship\Generator;
+namespace Thiagorb\Codeship\Generator;
 
-use ServiceGenerator\Targets\HttpClient\ContractHandler;
-use Codeship\Services\Organizations;
-use Codeship\Contracts\AccountOrganizations;
-use ServiceGenerator\Targets\HttpClient\ContractHandlers\DefaultContract;
+use Thiagorb\ServiceGenerator\Targets\HttpClient\ContractHandler;
+use Thiagorb\Codeship\Services\Organizations;
+use Thiagorb\Codeship\Contracts\AccountOrganizations;
+use Thiagorb\ServiceGenerator\Targets\HttpClient\ContractHandlers\DefaultContract;
 
-class Factory extends \ServiceGenerator\Targets\HttpClient\Factory
+class Factory extends \Thiagorb\ServiceGenerator\Targets\HttpClient\Factory
 {
-    public function makeContractHandler(\ServiceGenerator\Targets\HttpClient\ContractContext $contractContext): \ServiceGenerator\Targets\HttpClient\ContractHandler
+    public function makeContractHandler(\Thiagorb\ServiceGenerator\Targets\HttpClient\ContractContext $contractContext): \Thiagorb\ServiceGenerator\Targets\HttpClient\ContractHandler
     {
 
         if ($contractContext->getContract()->getFullClassName() !== AccountOrganizations::class) {

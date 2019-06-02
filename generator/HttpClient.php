@@ -1,11 +1,11 @@
 <?php
 
-namespace Codeship\Generator;
+namespace Thiagorb\Codeship\Generator;
 
-use ServiceGenerator\Targets\HttpClient\Generator;
-use ServiceGenerator\Configuration\Service as ServiceConfiguration;
-use ServiceGenerator\TypeResolver;
-use ServiceGenerator\Targets\HttpClient\Factory as DefaultFactory;
+use Thiagorb\ServiceGenerator\Targets\HttpClient\Generator;
+use Thiagorb\ServiceGenerator\Configuration\Service as ServiceConfiguration;
+use Thiagorb\ServiceGenerator\TypeResolver;
+use Thiagorb\ServiceGenerator\Targets\HttpClient\Factory as DefaultFactory;
 
 class HttpClient extends Generator
 {
@@ -14,7 +14,7 @@ class HttpClient extends Generator
         return new Factory($serviceConfiguration, $typeResolver);
     }
 
-    public function generate(\ServiceGenerator\Configuration\Service $serviceConfiguration, \ServiceGenerator\TypeResolver $typeResolver): \Traversable
+    public function generate(ServiceConfiguration $serviceConfiguration, TypeResolver $typeResolver): \Traversable
     {
         yield from (new Models)->generate();
 

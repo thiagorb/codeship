@@ -1,9 +1,9 @@
 <?php
 
-namespace Codeship\Contracts\Organizations\Projects;
+namespace Thiagorb\Codeship\Contracts\Organizations\Projects;
 
-use Codeship\Contracts\Organizations\Projects\TestPipelines\TestPipeline;
-use Codeship\Responses\Organizations\Projects\TestPipelines\Create;
+use Thiagorb\Codeship\Contracts\Organizations\Projects\TestPipelines\TestPipeline;
+use Thiagorb\Codeship\Responses\Organizations\Projects\TestPipelines\Create;
 
 interface TestPipelines
 {

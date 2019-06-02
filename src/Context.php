@@ -1,15 +1,15 @@
 <?php
 
-namespace Codeship;
+namespace Thiagorb\Codeship;
 
 use Psr\Http\Client\ClientInterface;
-use ServiceGeneratorRuntime\RequestFactory;
-use Codeship\Client\Service;
+use Thiagorb\ServiceGeneratorRuntime\RequestFactory;
+use Thiagorb\Codeship\Client\Service;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use ServiceGeneratorRuntime\Errors\UnexpectedResponse;
-use Codeship\Exceptions\Unauthorized;
-use Codeship\Exceptions\BadRequest;
+use Thiagorb\ServiceGeneratorRuntime\Errors\UnexpectedResponse;
+use Thiagorb\Codeship\Exceptions\Unauthorized;
+use Thiagorb\Codeship\Exceptions\BadRequest;
 
 class Context extends Service
 {

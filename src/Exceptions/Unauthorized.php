@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeship\Exceptions;
+namespace Thiagorb\Codeship\Exceptions;
 
 class Unauthorized extends \Exception
 {

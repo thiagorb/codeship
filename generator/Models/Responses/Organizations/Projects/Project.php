@@ -18,8 +18,8 @@ return [
     'branches' => ['type' => '?string[]'],
     'buildOnPrOnly' => ['type' => '?bool'],
     'setupCommands' => ['type' => '?string[]'],
-    'deploymentPipelines' => ['type' => '?\Codeship\Responses\Organizations\Projects\DeploymentPipeline[]'],
-    'environmentVariables' => ['type' => '?\Codeship\Responses\Organizations\Projects\EnvironmentVariable[]'],
-    'testPipelines' => ['type' => '?\Codeship\Responses\Organizations\Projects\TestPipeline[]'],
-    'notificationRules' => ['type' => '?\Codeship\Responses\Organizations\Projects\NotificationRule[]'],
+    'deploymentPipelines' => ['type' => '?\Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[]'],
+    'environmentVariables' => ['type' => '?\Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[]'],
+    'testPipelines' => ['type' => '?\Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[]'],
+    'notificationRules' => ['type' => '?\Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[]'],
 ];

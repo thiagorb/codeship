@@ -1,9 +1,9 @@
 <?php
 
-namespace Codeship\Generator;
+namespace Thiagorb\Codeship\Generator;
 
 use Nette\PhpGenerator\ClassType;
-use ServiceGenerator\Definitions\File;
+use Thiagorb\ServiceGenerator\Definitions\File;
 use Nette\PhpGenerator\PhpFile;
 
 class Models
@@ -11,12 +11,12 @@ class Models
     /**
      * @var string
      */
-    protected $basePath = __DIR__ . '/..';
+    protected $basePath = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'src';
 
     /**
      * @var string[]
      */
-    protected $baseNamespace = ['Codeship'];
+    protected $baseNamespace = ['Thiagorb', 'Codeship'];
 
     public function generate(): \Traversable
     {

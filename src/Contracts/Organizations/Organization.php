@@ -1,6 +1,6 @@
 <?php
 
-namespace Codeship\Contracts\Organizations;
+namespace Thiagorb\Codeship\Contracts\Organizations;
 
 interface Organization
 {
