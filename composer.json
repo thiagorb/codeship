@@ -12,9 +12,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "GitLab\\Client\\": "output/gitlab/",
-            "Codeship\\": "src/",
-            "Codeship\\Client\\": "generated/"
+            "Thiagorb\\Codeship\\": "src/",
+            "Thiagorb\\Codeship\\Client\\": "generated/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codeship\\Generator\\": "generator/"
         }
     },
     "require-dev": {
