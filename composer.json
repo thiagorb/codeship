@@ -9,7 +9,15 @@
             "email": "thiago.barcala@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^7.1",
+        "thiagorb/service-generator-runtime": "dev-master"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^3.0",
+        "thiagorb/service-generator": "dev-master",
+        "php-http/guzzle6-adapter": "^2.0"
+    },
     "autoload": {
         "psr-4": {
             "Thiagorb\\Codeship\\": "src/",
@@ -18,10 +26,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Codeship\\Generator\\": "generator/"
+            "Thiagorb\\Codeship\\Generator\\": "generator/"
         }
-    },
-    "require-dev": {
-        "vimeo/psalm": "^3.0"
     }
 }
