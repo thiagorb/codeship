@@ -1,0 +1,5 @@
+/vendor/
+/composer.lock
+/src/Client
+/src/Requests
+/src/Responses

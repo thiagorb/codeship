@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<psalm
+    useDocblockTypes="true"
+    totallyTyped="true"
+    strictBinaryOperands="false"
+    rememberPropertyAssignmentsAfterCall="true"
+    checkForThrowsDocblock="false"
+    throwExceptionOnError="0"
+    findUnusedCode="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config config.xsd"
+>
+    <projectFiles>
+        <directory name="src" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
+
+    <issueHandlers>
+        <UnusedClass>
+            <errorLevel type="suppress">
+                <directory name="src"/>
+                <directory name="generator"/>
+            </errorLevel>
+        </UnusedClass>
+
+        <PossiblyUnusedMethod>
+            <errorLevel type="suppress">
+                <directory name="src/Contracts"/>
+                <directory name="src/Requests"/>
+                <directory name="src/Responses"/>
+            </errorLevel>
+        </PossiblyUnusedMethod>
+    </issueHandlers>
+</psalm>
