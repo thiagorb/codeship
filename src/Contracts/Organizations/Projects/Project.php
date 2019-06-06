@@ -8,6 +8,7 @@ use Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRule;
 use Thiagorb\Codeship\Requests\Organizations\Projects\EnvironmentVariable;
 use Thiagorb\Codeship\Responses\Organizations\Projects\Read;
 use Thiagorb\Codeship\Responses\Organizations\Projects\Update;
+use Thiagorb\Codeship\Responses\Organizations\Projects\ResetAesKey;
 
 interface Project
 {
@@ -37,4 +38,6 @@ interface Project
     public function testPipelines(): TestPipelines;
 
     public function deployPipelines(): DeployPipelines;
+
+    public function resetAesKey(): ResetAesKey;
 }
