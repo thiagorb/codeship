@@ -7,6 +7,7 @@ use Thiagorb\Codeship\Contracts\Organizations\Projects\TestPipelines;
 use Thiagorb\Codeship\Requests\Organizations\Projects\EnvironmentVariable;
 use Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRule;
 use Thiagorb\Codeship\Responses\Organizations\Projects\Read;
+use Thiagorb\Codeship\Responses\Organizations\Projects\ResetAesKey;
 use Thiagorb\Codeship\Responses\Organizations\Projects\Update;
 
 class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \Thiagorb\Codeship\Contracts\Organizations\Projects\Project
@@ -119,6 +120,15 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 					'transformer' => 'Thiagorb\Codeship\Client\Transformers\Thiagorb\Codeship\Responses\Organizations\Projects\UpdateTransformer',
 				],
 			],
+			'resetAesKey' => [
+				'relative_path' => 'reset_aes_key',
+				'http_method' => 'post',
+				'parameters' => [],
+				'exceptions' => [],
+				'return_type' => [
+					'transformer' => 'Thiagorb\Codeship\Client\Transformers\Thiagorb\Codeship\Responses\Organizations\Projects\ResetAesKeyTransformer',
+				],
+			],
 		],
 	];
 
@@ -171,5 +181,11 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 	public function deployPipelines(): DeployPipelines
 	{
 		return $this->createSubcontract('deploy_pipelines', 'Thiagorb\\Codeship\\Contracts\\Organizations\\Projects\\DeployPipelines');
+	}
+
+
+	public function resetAesKey(): ResetAesKey
+	{
+		return $this->processMessage('resetAesKey', []);
 	}
 }
