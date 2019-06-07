@@ -39,5 +39,7 @@ interface Project
 
     public function deployPipelines(): DeployPipelines;
 
+    public function builds(): Builds;
+
     public function resetAesKey(): ResetAesKey;
 }
