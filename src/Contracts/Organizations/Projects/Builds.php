@@ -2,6 +2,7 @@
 
 namespace Thiagorb\Codeship\Contracts\Organizations\Projects;
 
+use Thiagorb\Codeship\Contracts\Organizations\Projects\Builds\Build;
 use Thiagorb\Codeship\Responses\Organizations\Projects\Builds\BuildsList;
 
 interface Builds
@@ -21,4 +22,6 @@ interface Builds
      * @return BuildsList
      */
     public function read(int $perPage = null, int $page = null): BuildsList;
+
+    public function find(string $uuid): Build;
 }
