@@ -2,6 +2,8 @@
 
 namespace Thiagorb\Codeship\Contracts\Organizations\Projects;
 
+use Thiagorb\Codeship\Responses\Organizations\Projects\Builds\BuildsList;
+
 interface Builds
 {
     /**
@@ -11,4 +13,12 @@ interface Builds
      * @return void
      */
     public function create(string $ref, ?string $commitSha = null);
+
+    /**
+     * @param int|null $perPage
+     * @param int|null $page
+     *
+     * @return BuildsList
+     */
+    public function read(int $perPage = null, int $page = null): BuildsList;
 }
