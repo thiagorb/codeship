@@ -7,7 +7,7 @@ use Thiagorb\ServiceGeneratorRuntime\RequestFactory;
 use Thiagorb\Codeship\Client\Service;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Thiagorb\ServiceGeneratorRuntime\Errors\UnexpectedResponse;
+use Thiagorb\Codeship\Errors\UnexpectedResponse;
 use Thiagorb\Codeship\Exceptions\Unauthorized;
 use Thiagorb\Codeship\Exceptions\BadRequest;
 
@@ -82,7 +82,7 @@ class Context extends Service
             echo 'Response body: ' . $response->getBody()->getContents() . PHP_EOL;
             echo 'Request body: ' . $request->getBody() . PHP_EOL;
 
-            throw new UnexpectedResponse($response);
+            throw new UnexpectedResponse($request, $response);
         }
     }
 
