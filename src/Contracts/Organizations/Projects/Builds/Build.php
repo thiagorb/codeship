@@ -9,4 +9,14 @@ interface Build
     public function read(): Read;
 
     public function pipelines(): Pipelines;
+
+    /**
+     * @return void
+     */
+    public function stop();
+
+    /**
+     * @return void
+     */
+    public function restart();
 }
