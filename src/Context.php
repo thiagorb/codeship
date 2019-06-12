@@ -51,13 +51,6 @@ class Context extends Service
     {
         $accessToken = $this->getAuthentication()['access_token'];
         $response = parent::sendRequest($request->withHeader('Authorization', "Bearer {$accessToken}"));
-        // file_put_contents(
-        //     __DIR__ . '/responses.json',
-        //     json_encode(json_decode($response->getBody()->getContents()), JSON_PRETTY_PRINT) . PHP_EOL,
-        //     FILE_APPEND
-        // );
-
-        //echo $request->getUri() . PHP_EOL;
         $this->validateResponse($request, $response);
 
         return $response;
@@ -74,14 +67,6 @@ class Context extends Service
         }
 
         if ($response->getStatusCode() < 200 || $response->getStatusCode() >= 300) {
-            echo $response->getStatusCode() . PHP_EOL;
-            echo $response->getReasonPhrase() . PHP_EOL;
-            foreach ($response->getHeaders() as $header => $values) {
-                printf("%s: %s\n", $header, implode(', ', $values));
-            }
-            echo 'Response body: ' . $response->getBody()->getContents() . PHP_EOL;
-            echo 'Request body: ' . $request->getBody() . PHP_EOL;
-
             throw new UnexpectedResponse($request, $response);
         }
     }
