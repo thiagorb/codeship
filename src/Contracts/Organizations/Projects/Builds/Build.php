@@ -19,4 +19,6 @@ interface Build
      * @return void
      */
     public function restart();
+
+    public function services(): Services;
 }
