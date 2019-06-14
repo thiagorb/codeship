@@ -2,6 +2,7 @@
 
 namespace Thiagorb\Codeship\Client\Implementations\Organizations\Projects;
 
+use Thiagorb\Codeship\Contracts\Organizations\Projects\Builds;
 use Thiagorb\Codeship\Contracts\Organizations\Projects\DeployPipelines;
 use Thiagorb\Codeship\Contracts\Organizations\Projects\TestPipelines;
 use Thiagorb\Codeship\Requests\Organizations\Projects\EnvironmentVariable;
@@ -181,6 +182,12 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 	public function deployPipelines(): DeployPipelines
 	{
 		return $this->createSubcontract('deploy_pipelines', 'Thiagorb\\Codeship\\Contracts\\Organizations\\Projects\\DeployPipelines');
+	}
+
+
+	public function builds(): Builds
+	{
+		return $this->createSubcontract('builds', 'Thiagorb\\Codeship\\Contracts\\Organizations\\Projects\\Builds');
 	}
 
 
