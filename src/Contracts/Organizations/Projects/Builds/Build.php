@@ -21,4 +21,6 @@ interface Build
     public function restart();
 
     public function services(): Services;
+
+    public function steps(): Steps;
 }
