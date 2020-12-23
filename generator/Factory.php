@@ -11,7 +11,6 @@ class Factory extends \Thiagorb\ServiceGenerator\Targets\HttpClient\Factory
 {
     public function makeContractHandler(\Thiagorb\ServiceGenerator\Targets\HttpClient\ContractContext $contractContext): \Thiagorb\ServiceGenerator\Targets\HttpClient\ContractHandler
     {
-
         if ($contractContext->getContract()->getFullClassName() !== AccountOrganizations::class) {
             return parent::makeContractHandler($contractContext);
         }

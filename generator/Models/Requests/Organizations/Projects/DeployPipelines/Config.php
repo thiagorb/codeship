@@ -23,5 +23,5 @@ return [
     'backup' => ['type' => '?string', 'defaultValue' => null],
     'force' => ['type' => '?string', 'defaultValue' => null],
     'checkUrl' => ['type' => '?string', 'defaultValue' => null],
-    'commands' => ['type' => '?string[]', 'defaultValue' => null],
+    'commands' => ['type' => 'string[]|null', 'defaultValue' => null],
 ];

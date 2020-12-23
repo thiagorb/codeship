@@ -19,15 +19,15 @@ interface Projects
 	/**
 	 * @param string $repositoryUrl
 	 * @param string $type
-	 * @param ?string[] $setupCommands
-	 * @param ?TestPipeline[] $testPipelines
-	 * @param ?int[] $teamIds
-	 * @param ?NotificationRule[] $notificationRules
-	 * @param ?EnvironmentVariable[] $environmentVariables
-	 * @param ?DeployPipeline[] $deployPipelines
+	 * @param string[]|null $setupCommands
+	 * @param TestPipeline[]|null $testPipelines
+	 * @param int[]|null $teamIds
+	 * @param NotificationRule[]|null $notificationRules
+	 * @param EnvironmentVariable[]|null $environmentVariables
+	 * @param DeployPipeline[]|null $deployPipelines
 	 * @param ?bool $buildOnPrOnly
 	 * @param ?string $branchMatch
-	 * @param ?string[] $branches
+	 * @param string[]|null $branches
      *
      * @return Create
 	 */

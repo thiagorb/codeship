@@ -9,7 +9,7 @@ interface TestPipelines
 {
 	/**
 	 * @param ?string $name
-	 * @param ?string[] $commands
+	 * @param string[]|null $commands
 	 *
 	 * @return Create
 	 */

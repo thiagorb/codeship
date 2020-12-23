@@ -12,7 +12,7 @@ fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-cd "$DIR"
+cd "$DIR/.."
 
 if ! [[ -z $(git status -s) ]]
 then
@@ -36,7 +36,7 @@ next_version="$(php -r '
 
 git reset --hard origin/master
 git reset origin/release
-php generate.php
+composer generate
 git add -f src/Client/ src/Requests/ src/Responses/
 git add -A
 git commit -m 'Release'
