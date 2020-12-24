@@ -11,11 +11,13 @@ class EnvironmentVariableTransformer extends \Thiagorb\ServiceGeneratorRuntime\T
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'name',
 		],
 		'value' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'value',
 		],
 	];
 }

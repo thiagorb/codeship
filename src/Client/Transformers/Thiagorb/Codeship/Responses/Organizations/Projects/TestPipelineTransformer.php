@@ -11,11 +11,13 @@ class TestPipelineTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'id',
 		],
 		'name' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'name',
 		],
 		'commands' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -23,23 +25,24 @@ class TestPipelineTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 				[
 					'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 					'arguments' => [
-						[
-							'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-						],
+						['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 					],
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'commands',
 		],
 		'createdAt' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'created_at',
 		],
 		'updatedAt' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'updated_at',
 		],
 	];
 }

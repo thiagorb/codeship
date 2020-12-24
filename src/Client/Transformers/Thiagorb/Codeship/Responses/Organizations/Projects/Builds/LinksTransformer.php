@@ -11,16 +11,19 @@ class LinksTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transformers\Im
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'pipelines',
 		],
 		'services' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'services',
 		],
 		'steps' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'steps',
 		],
 	];
 }

@@ -11,16 +11,19 @@ class NotificationRuleTransformer extends \Thiagorb\ServiceGeneratorRuntime\Tran
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'notifier',
 		],
 		'target' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'target',
 		],
 		'branch' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'branch',
 		],
 		'options' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -35,6 +38,7 @@ class NotificationRuleTransformer extends \Thiagorb\ServiceGeneratorRuntime\Tran
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'options',
 		],
 		'buildStatuses' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -42,18 +46,18 @@ class NotificationRuleTransformer extends \Thiagorb\ServiceGeneratorRuntime\Tran
 				[
 					'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 					'arguments' => [
-						[
-							'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-						],
+						['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 					],
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'build_statuses',
 		],
 		'branchMatch' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'branch_match',
 		],
 	];
 }

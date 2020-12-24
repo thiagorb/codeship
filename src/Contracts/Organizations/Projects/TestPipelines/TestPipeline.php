@@ -11,7 +11,7 @@ interface TestPipeline
 
 	/**
 	 * @param ?string $name
-	 * @param ?string[] $commands
+	 * @param string[]|null $commands
 	 *
 	 * @return Update
 	 */

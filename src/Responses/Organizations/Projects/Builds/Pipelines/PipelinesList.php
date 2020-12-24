@@ -4,7 +4,7 @@ namespace Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines;
 
 class PipelinesList
 {
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines\Pipeline[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines\Pipeline[]|null */
 	protected $pipelines;
 
 	/** @var int */
@@ -21,7 +21,7 @@ class PipelinesList
 	 * @param int $total
 	 * @param int $perPage
 	 * @param int $page
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines\Pipeline[] $pipelines
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines\Pipeline[]|null $pipelines
 	 */
 	public function __construct(int $total, int $perPage, int $page, ?array $pipelines)
 	{
@@ -33,7 +33,7 @@ class PipelinesList
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines\Pipeline[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines\Pipeline[]|null
 	 */
 	public function getPipelines(): ?array
 	{
@@ -42,7 +42,7 @@ class PipelinesList
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines\Pipeline[] $pipelines
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Pipelines\Pipeline[]|null $pipelines
 	 */
 	public function withPipelines(?array $pipelines): self
 	{

@@ -10,14 +10,17 @@ class StepsListTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transformer
 		'total' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'total',
 		],
 		'perPage' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'per_page',
 		],
 		'page' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'page',
 		],
 		'steps' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -32,6 +35,7 @@ class StepsListTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transformer
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'steps',
 		],
 	];
 }

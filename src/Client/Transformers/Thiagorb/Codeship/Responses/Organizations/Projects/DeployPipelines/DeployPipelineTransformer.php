@@ -11,16 +11,19 @@ class DeployPipelineTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transf
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'id',
 		],
 		'branch' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'branch',
 		],
 		'matchMode' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'match_mode',
 		],
 		'config' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -35,21 +38,25 @@ class DeployPipelineTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transf
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'config',
 		],
 		'position' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'position',
 		],
 		'createdAt' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'created_at',
 		],
 		'updatedAt' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'updated_at',
 		],
 	];
 }

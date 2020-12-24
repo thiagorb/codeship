@@ -11,12 +11,12 @@
     ],
     "require": {
         "php": "^7.1",
-        "thiagorb/service-generator-runtime": "^0.1"
+        "thiagorb/service-generator-runtime": "^0.2"
     },
     "require-dev": {
         "vimeo/psalm": "^3.0",
-        "thiagorb/service-generator": "^0.1",
-        "php-http/guzzle6-adapter": "^2.0"
+        "php-http/guzzle6-adapter": "^2.0",
+        "thiagorb/service-generator": "^0.2"
     },
     "autoload": {
         "psr-4": {
@@ -28,5 +28,8 @@
         "psr-4": {
             "Thiagorb\\Codeship\\Generator\\": "generator/"
         }
+    },
+    "scripts": {
+        "generate": "service-generator --ansi --configuration='Thiagorb\\Codeship\\Generator\\ConfigurationProvider'"
     }
 }

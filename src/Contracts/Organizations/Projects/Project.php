@@ -16,12 +16,12 @@ interface Project
 
     /**
      * @param string $type
-     * @param ?string[] $setupCommands
-     * @param ?int[] $teamIds
-     * @param ?NotificationRule[] $notificationRules
-     * @param ?EnvironmentVariable[] $environmentVariables
+     * @param string[]|null $setupCommands
+     * @param int[]|null $teamIds
+     * @param NotificationRule[]|null $notificationRules
+     * @param EnvironmentVariable[]|null $environmentVariables
      * @param ?bool $buildOnPrOnly
-     * @param ?string[] $branches
+     * @param string[]|null $branches
      * @param ?string $branchMatch
      */
     public function update(

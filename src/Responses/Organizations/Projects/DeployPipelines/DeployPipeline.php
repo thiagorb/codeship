@@ -13,7 +13,7 @@ class DeployPipeline
 	/** @var ?string */
 	protected $matchMode;
 
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config[]|null */
 	protected $config;
 
 	/** @var ?int */
@@ -30,20 +30,13 @@ class DeployPipeline
 	 * @param ?int $id
 	 * @param ?string $branch
 	 * @param ?string $matchMode
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config[] $config
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config[]|null $config
 	 * @param ?int $position
 	 * @param ?string $createdAt
 	 * @param ?string $updatedAt
 	 */
-	public function __construct(
-		?int $id,
-		?string $branch,
-		?string $matchMode,
-		?array $config,
-		?int $position,
-		?string $createdAt,
-		?string $updatedAt
-	) {
+	public function __construct(?int $id, ?string $branch, ?string $matchMode, ?array $config, ?int $position, ?string $createdAt, ?string $updatedAt)
+	{
 		$this->id = $id;
 		$this->branch = $branch;
 		$this->matchMode = $matchMode;
@@ -115,7 +108,7 @@ class DeployPipeline
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config[]|null
 	 */
 	public function getConfig(): ?array
 	{
@@ -124,7 +117,7 @@ class DeployPipeline
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config[] $config
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\Config[]|null $config
 	 */
 	public function withConfig(?array $config): self
 	{

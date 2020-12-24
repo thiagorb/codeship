@@ -10,14 +10,14 @@ class Organization
 	/** @var ?string */
 	protected $name;
 
-	/** @var ?string[] */
+	/** @var string[]|null */
 	protected $scope;
 
 
 	/**
 	 * @param ?string $uuid
 	 * @param ?string $name
-	 * @param ?string[] $scope
+	 * @param string[]|null $scope
 	 */
 	public function __construct(?string $uuid, ?string $name, ?array $scope)
 	{
@@ -68,7 +68,7 @@ class Organization
 
 
 	/**
-	 * @return ?string[]
+	 * @return string[]|null
 	 */
 	public function getScope(): ?array
 	{
@@ -77,7 +77,7 @@ class Organization
 
 
 	/**
-	 * @param ?string[] $scope
+	 * @param string[]|null $scope
 	 */
 	public function withScope(?array $scope): self
 	{

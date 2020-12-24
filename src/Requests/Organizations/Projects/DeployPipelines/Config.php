@@ -70,7 +70,7 @@ class Config
 	/** @var ?string */
 	protected $checkUrl;
 
-	/** @var ?string[] */
+	/** @var string[]|null */
 	protected $commands;
 
 
@@ -97,7 +97,7 @@ class Config
 	 * @param ?string $backup
 	 * @param ?string $force
 	 * @param ?string $checkUrl
-	 * @param ?string[] $commands
+	 * @param string[]|null $commands
 	 */
 	public function __construct(
 		string $type = null,
@@ -591,7 +591,7 @@ class Config
 
 
 	/**
-	 * @return ?string[]
+	 * @return string[]|null
 	 */
 	public function getCommands(): ?array
 	{
@@ -600,7 +600,7 @@ class Config
 
 
 	/**
-	 * @param ?string[] $commands
+	 * @param string[]|null $commands
 	 */
 	public function withCommands(?array $commands): self
 	{

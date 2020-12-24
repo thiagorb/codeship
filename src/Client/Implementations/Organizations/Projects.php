@@ -24,34 +24,30 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 					'perPage' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'per_page',
 					],
 					'page' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'page',
 					],
 					'name' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'name',
 					],
 					'type' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'type',
 					],
 				],
 				'exceptions' => [],
@@ -65,9 +61,11 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 				'parameters' => [
 					'repositoryUrl' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
+						'encodedName' => 'repository_url',
 					],
 					'type' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
+						'encodedName' => 'type',
 					],
 					'setupCommands' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -75,12 +73,11 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 							[
 								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 								'arguments' => [
-									[
-										'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-									],
+									['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 								],
 							],
 						],
+						'encodedName' => 'setup_commands',
 					],
 					'testPipelines' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -94,6 +91,7 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 								],
 							],
 						],
+						'encodedName' => 'test_pipelines',
 					],
 					'teamIds' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -101,12 +99,11 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 							[
 								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 								'arguments' => [
-									[
-										'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-									],
+									['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 								],
 							],
 						],
+						'encodedName' => 'team_ids',
 					],
 					'notificationRules' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -120,6 +117,7 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 								],
 							],
 						],
+						'encodedName' => 'notification_rules',
 					],
 					'environmentVariables' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -133,6 +131,7 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 								],
 							],
 						],
+						'encodedName' => 'environment_variables',
 					],
 					'deployPipelines' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -146,22 +145,21 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 								],
 							],
 						],
+						'encodedName' => 'deploy_pipelines',
 					],
 					'buildOnPrOnly' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'build_on_pr_only',
 					],
 					'branchMatch' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'branch_match',
 					],
 					'branches' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -169,12 +167,11 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 							[
 								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 								'arguments' => [
-									[
-										'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-									],
+									['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 								],
 							],
 						],
+						'encodedName' => 'branches',
 					],
 				],
 				'exceptions' => [],
@@ -206,15 +203,15 @@ class Projects extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements 
 	/**
 	 * @param string $repositoryUrl
 	 * @param string $type
-	 * @param ?string[] $setupCommands
-	 * @param ?TestPipeline[] $testPipelines
-	 * @param ?int[] $teamIds
-	 * @param ?NotificationRule[] $notificationRules
-	 * @param ?EnvironmentVariable[] $environmentVariables
-	 * @param ?DeployPipeline[] $deployPipelines
+	 * @param string[]|null $setupCommands
+	 * @param TestPipeline[]|null $testPipelines
+	 * @param int[]|null $teamIds
+	 * @param NotificationRule[]|null $notificationRules
+	 * @param EnvironmentVariable[]|null $environmentVariables
+	 * @param DeployPipeline[]|null $deployPipelines
 	 * @param ?bool $buildOnPrOnly
 	 * @param ?string $branchMatch
-	 * @param ?string[] $branches
+	 * @param string[]|null $branches
 	 *
 	 * @return Create
 	 */

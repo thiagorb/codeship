@@ -19,9 +19,11 @@ class DeployPipelines extends \Thiagorb\ServiceGeneratorRuntime\BaseService impl
 				'parameters' => [
 					'branch' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
+						'encodedName' => 'branch',
 					],
 					'matchMode' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
+						'encodedName' => 'match_mode',
 					],
 					'config' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
@@ -30,6 +32,7 @@ class DeployPipelines extends \Thiagorb\ServiceGeneratorRuntime\BaseService impl
 								'transformer' => 'Thiagorb\Codeship\Client\Transformers\Thiagorb\Codeship\Requests\Organizations\Projects\DeployPipelines\ConfigTransformer',
 							],
 						],
+						'encodedName' => 'config',
 					],
 				],
 				'exceptions' => [],

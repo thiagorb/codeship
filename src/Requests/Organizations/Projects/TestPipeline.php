@@ -7,13 +7,13 @@ class TestPipeline
 	/** @var ?string */
 	protected $name;
 
-	/** @var ?string[] */
+	/** @var string[]|null */
 	protected $commands;
 
 
 	/**
 	 * @param ?string $name
-	 * @param ?string[] $commands
+	 * @param string[]|null $commands
 	 */
 	public function __construct(?string $name = null, ?array $commands = null)
 	{
@@ -43,7 +43,7 @@ class TestPipeline
 
 
 	/**
-	 * @return ?string[]
+	 * @return string[]|null
 	 */
 	public function getCommands(): ?array
 	{
@@ -52,7 +52,7 @@ class TestPipeline
 
 
 	/**
-	 * @param ?string[] $commands
+	 * @param string[]|null $commands
 	 */
 	public function withCommands(?array $commands): self
 	{

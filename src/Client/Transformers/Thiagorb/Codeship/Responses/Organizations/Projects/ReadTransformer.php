@@ -10,6 +10,7 @@ class ReadTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transformers\Imm
 		'project' => [
 			'transformer' => 'Thiagorb\Codeship\Client\Transformers\Thiagorb\Codeship\Responses\Organizations\Projects\ProjectTransformer',
 			'nullable' => false,
+			'encodedName' => 'project',
 		],
 	];
 }

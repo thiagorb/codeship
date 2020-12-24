@@ -12,6 +12,7 @@ class TestPipelineTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'defaultValue' => null,
 			'nullable' => true,
+			'encodedName' => 'name',
 		],
 		'commands' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -19,14 +20,13 @@ class TestPipelineTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 				[
 					'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 					'arguments' => [
-						[
-							'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-						],
+						['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 					],
 				],
 			],
 			'defaultValue' => null,
 			'nullable' => true,
+			'encodedName' => 'commands',
 		],
 	];
 }

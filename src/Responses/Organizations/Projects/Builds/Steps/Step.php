@@ -37,7 +37,7 @@ class Step
 	/** @var ?string */
 	protected $finished_at;
 
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null */
 	protected $steps;
 
 	/** @var ?string */
@@ -62,7 +62,7 @@ class Step
 	 * @param ?string $started_at
 	 * @param ?string $building_at
 	 * @param ?string $finished_at
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[] $steps
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null $steps
 	 * @param ?string $command
 	 * @param ?string $image_name
 	 * @param ?string $registry
@@ -323,7 +323,7 @@ class Step
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null
 	 */
 	public function getSteps(): ?array
 	{
@@ -332,7 +332,7 @@ class Step
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[] $steps
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null $steps
 	 */
 	public function withSteps(?array $steps): self
 	{

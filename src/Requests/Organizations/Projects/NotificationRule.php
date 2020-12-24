@@ -13,10 +13,10 @@ class NotificationRule
 	/** @var ?string */
 	protected $branch;
 
-	/** @var ?\Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRuleOption[] */
+	/** @var \Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRuleOption[]|null */
 	protected $options;
 
-	/** @var ?string[] */
+	/** @var string[]|null */
 	protected $buildStatuses;
 
 	/** @var ?string */
@@ -27,18 +27,12 @@ class NotificationRule
 	 * @param ?string $notifier
 	 * @param ?string $target
 	 * @param ?string $branch
-	 * @param ?\Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRuleOption[] $options
-	 * @param ?string[] $buildStatuses
+	 * @param \Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRuleOption[]|null $options
+	 * @param string[]|null $buildStatuses
 	 * @param ?string $branchMatch
 	 */
-	public function __construct(
-		?string $notifier,
-		?string $target,
-		?string $branch,
-		?array $options,
-		?array $buildStatuses,
-		?string $branchMatch
-	) {
+	public function __construct(?string $notifier, ?string $target, ?string $branch, ?array $options, ?array $buildStatuses, ?string $branchMatch)
+	{
 		$this->notifier = $notifier;
 		$this->target = $target;
 		$this->branch = $branch;
@@ -109,7 +103,7 @@ class NotificationRule
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRuleOption[]
+	 * @return \Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRuleOption[]|null
 	 */
 	public function getOptions(): ?array
 	{
@@ -118,7 +112,7 @@ class NotificationRule
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRuleOption[] $options
+	 * @param \Thiagorb\Codeship\Requests\Organizations\Projects\NotificationRuleOption[]|null $options
 	 */
 	public function withOptions(?array $options): self
 	{
@@ -129,7 +123,7 @@ class NotificationRule
 
 
 	/**
-	 * @return ?string[]
+	 * @return string[]|null
 	 */
 	public function getBuildStatuses(): ?array
 	{
@@ -138,7 +132,7 @@ class NotificationRule
 
 
 	/**
-	 * @param ?string[] $buildStatuses
+	 * @param string[]|null $buildStatuses
 	 */
 	public function withBuildStatuses(?array $buildStatuses): self
 	{

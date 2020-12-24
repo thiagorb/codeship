@@ -10,14 +10,17 @@ class ServicesListTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 		'total' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'total',
 		],
 		'perPage' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'per_page',
 		],
 		'page' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'page',
 		],
 		'services' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -32,6 +35,7 @@ class ServicesListTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'services',
 		],
 	];
 }

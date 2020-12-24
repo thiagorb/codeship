@@ -33,6 +33,7 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 				'parameters' => [
 					'type' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
+						'encodedName' => 'type',
 					],
 					'setupCommands' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -40,12 +41,11 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 							[
 								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 								'arguments' => [
-									[
-										'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-									],
+									['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 								],
 							],
 						],
+						'encodedName' => 'setup_commands',
 					],
 					'teamIds' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -53,12 +53,11 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 							[
 								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 								'arguments' => [
-									[
-										'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-									],
+									['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 								],
 							],
 						],
+						'encodedName' => 'team_ids',
 					],
 					'notificationRules' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -72,6 +71,7 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 								],
 							],
 						],
+						'encodedName' => 'notification_rules',
 					],
 					'environmentVariables' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -85,14 +85,14 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 								],
 							],
 						],
+						'encodedName' => 'environment_variables',
 					],
 					'buildOnPrOnly' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'build_on_pr_only',
 					],
 					'branches' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -100,20 +100,18 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 							[
 								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 								'arguments' => [
-									[
-										'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-									],
+									['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 								],
 							],
 						],
+						'encodedName' => 'branches',
 					],
 					'branchMatch' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'branch_match',
 					],
 				],
 				'exceptions' => [],
@@ -142,12 +140,12 @@ class Project extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \
 
 	/**
 	 * @param string $type
-	 * @param ?string[] $setupCommands
-	 * @param ?int[] $teamIds
-	 * @param ?NotificationRule[] $notificationRules
-	 * @param ?EnvironmentVariable[] $environmentVariables
+	 * @param string[]|null $setupCommands
+	 * @param int[]|null $teamIds
+	 * @param NotificationRule[]|null $notificationRules
+	 * @param EnvironmentVariable[]|null $environmentVariables
 	 * @param ?bool $buildOnPrOnly
-	 * @param ?string[] $branches
+	 * @param string[]|null $branches
 	 * @param ?string $branchMatch
 	 */
 	public function update(

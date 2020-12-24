@@ -10,6 +10,7 @@ class CreateTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transformers\I
 		'deployPipeline' => [
 			'transformer' => 'Thiagorb\Codeship\Client\Transformers\Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\DeployPipelineTransformer',
 			'nullable' => false,
+			'encodedName' => 'deploy_pipeline',
 		],
 	];
 }

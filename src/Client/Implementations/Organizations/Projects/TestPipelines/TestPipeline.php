@@ -28,10 +28,9 @@ class TestPipeline extends \Thiagorb\ServiceGeneratorRuntime\BaseService impleme
 					'name' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'name',
 					],
 					'commands' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -39,12 +38,11 @@ class TestPipeline extends \Thiagorb\ServiceGeneratorRuntime\BaseService impleme
 							[
 								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 								'arguments' => [
-									[
-										'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-									],
+									['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 								],
 							],
 						],
+						'encodedName' => 'commands',
 					],
 				],
 				'exceptions' => [],
@@ -64,7 +62,7 @@ class TestPipeline extends \Thiagorb\ServiceGeneratorRuntime\BaseService impleme
 
 	/**
 	 * @param ?string $name
-	 * @param ?string[] $commands
+	 * @param string[]|null $commands
 	 *
 	 * @return Update
 	 */

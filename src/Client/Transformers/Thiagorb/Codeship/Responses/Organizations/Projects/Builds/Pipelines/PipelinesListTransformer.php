@@ -10,14 +10,17 @@ class PipelinesListTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfo
 		'total' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'total',
 		],
 		'perPage' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'per_page',
 		],
 		'page' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'page',
 		],
 		'pipelines' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -32,6 +35,7 @@ class PipelinesListTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfo
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'pipelines',
 		],
 	];
 }

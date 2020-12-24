@@ -20,6 +20,7 @@ class BuildsListTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transforme
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'builds',
 		],
 	];
 }

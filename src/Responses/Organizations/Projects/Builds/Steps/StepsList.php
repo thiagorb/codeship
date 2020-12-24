@@ -4,7 +4,7 @@ namespace Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps;
 
 class StepsList
 {
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null */
 	protected $steps;
 
 	/** @var int */
@@ -21,7 +21,7 @@ class StepsList
 	 * @param int $total
 	 * @param int $perPage
 	 * @param int $page
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[] $steps
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null $steps
 	 */
 	public function __construct(int $total, int $perPage, int $page, ?array $steps)
 	{
@@ -33,7 +33,7 @@ class StepsList
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null
 	 */
 	public function getSteps(): ?array
 	{
@@ -42,7 +42,7 @@ class StepsList
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[] $steps
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null $steps
 	 */
 	public function withSteps(?array $steps): self
 	{

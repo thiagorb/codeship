@@ -13,11 +13,4 @@ class HttpClient extends Generator
     {
         return new Factory($serviceConfiguration, $typeResolver);
     }
-
-    public function generate(ServiceConfiguration $serviceConfiguration, TypeResolver $typeResolver): \Traversable
-    {
-        yield from (new Models)->generate();
-
-        yield from parent::generate($serviceConfiguration, $typeResolver);
-    }
 }

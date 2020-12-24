@@ -4,7 +4,7 @@ namespace Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services;
 
 class ServicesList
 {
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services\Service[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services\Service[]|null */
 	protected $services;
 
 	/** @var int */
@@ -21,7 +21,7 @@ class ServicesList
 	 * @param int $total
 	 * @param int $perPage
 	 * @param int $page
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services\Service[] $services
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services\Service[]|null $services
 	 */
 	public function __construct(int $total, int $perPage, int $page, ?array $services)
 	{
@@ -33,7 +33,7 @@ class ServicesList
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services\Service[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services\Service[]|null
 	 */
 	public function getServices(): ?array
 	{
@@ -42,7 +42,7 @@ class ServicesList
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services\Service[] $services
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Services\Service[]|null $services
 	 */
 	public function withServices(?array $services): self
 	{

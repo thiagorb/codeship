@@ -12,7 +12,7 @@ return [
     'started_at' => ['type' => '?string'],
     'building_at' => ['type' => '?string'],
     'finished_at' => ['type' => '?string'],
-    'steps' => ['type' => '?\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]'],
+    'steps' => ['type' => '\Thiagorb\Codeship\Responses\Organizations\Projects\Builds\Steps\Step[]|null'],
     'command' => ['type' => '?string'],
     'image_name' => ['type' => '?string'],
     'registry' => ['type' => '?string'],

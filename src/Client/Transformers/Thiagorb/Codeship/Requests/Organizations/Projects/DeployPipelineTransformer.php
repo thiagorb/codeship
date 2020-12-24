@@ -10,10 +10,12 @@ class DeployPipelineTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transf
 		'branch' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'branch',
 		],
 		'matchMode' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'match_mode',
 		],
 		'config' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
@@ -23,6 +25,7 @@ class DeployPipelineTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transf
 				],
 			],
 			'nullable' => false,
+			'encodedName' => 'config',
 		],
 	];
 }

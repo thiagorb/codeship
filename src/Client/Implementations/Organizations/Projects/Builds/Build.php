@@ -31,9 +31,7 @@ class Build extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \Th
 				'return_type' => [
 					'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 					'arguments' => [
-						[
-							'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-						],
+						['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 					],
 				],
 			],
@@ -45,9 +43,7 @@ class Build extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \Th
 				'return_type' => [
 					'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 					'arguments' => [
-						[
-							'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-						],
+						['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 					],
 				],
 			],

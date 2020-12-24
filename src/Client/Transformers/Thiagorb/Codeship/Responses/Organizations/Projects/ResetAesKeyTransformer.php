@@ -10,6 +10,7 @@ class ResetAesKeyTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transform
 		'aesKey' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
 			'nullable' => false,
+			'encodedName' => 'aes_key',
 		],
 	];
 }

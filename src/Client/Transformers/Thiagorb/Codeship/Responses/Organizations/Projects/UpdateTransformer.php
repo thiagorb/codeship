@@ -10,6 +10,7 @@ class UpdateTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transformers\I
 		'project' => [
 			'transformer' => 'Thiagorb\Codeship\Client\Transformers\Thiagorb\Codeship\Responses\Organizations\Projects\ProjectTransformer',
 			'nullable' => false,
+			'encodedName' => 'project',
 		],
 	];
 }

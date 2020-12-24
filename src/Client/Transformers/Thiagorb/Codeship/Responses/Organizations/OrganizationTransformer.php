@@ -11,11 +11,13 @@ class OrganizationTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'uuid',
 		],
 		'name' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 			'arguments' => [['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer']],
 			'nullable' => true,
+			'encodedName' => 'name',
 		],
 		'scope' => [
 			'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
@@ -23,13 +25,12 @@ class OrganizationTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 				[
 					'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\ArrayTransformer',
 					'arguments' => [
-						[
-							'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-						],
+						['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 					],
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'scope',
 		],
 	];
 }

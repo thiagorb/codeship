@@ -31,14 +31,8 @@ class DeploymentPipeline
 	 * @param ?string $createdAt
 	 * @param ?string $updatedAt
 	 */
-	public function __construct(
-		?int $id,
-		?Branch $branch,
-		?DeployPipelines\Config $config,
-		?int $position,
-		?string $createdAt,
-		?string $updatedAt
-	) {
+	public function __construct(?int $id, ?Branch $branch, ?DeployPipelines\Config $config, ?int $position, ?string $createdAt, ?string $updatedAt)
+	{
 		$this->id = $id;
 		$this->branch = $branch;
 		$this->config = $config;

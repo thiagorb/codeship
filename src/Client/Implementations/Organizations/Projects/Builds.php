@@ -18,23 +18,21 @@ class Builds extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \T
 				'parameters' => [
 					'ref' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
+						'encodedName' => 'ref',
 					],
 					'commitSha' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'commit_sha',
 					],
 				],
 				'exceptions' => [],
 				'return_type' => [
 					'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 					'arguments' => [
-						[
-							'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-						],
+						['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 					],
 				],
 			],
@@ -45,18 +43,16 @@ class Builds extends \Thiagorb\ServiceGeneratorRuntime\BaseService implements \T
 					'perPage' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'per_page',
 					],
 					'page' => [
 						'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\NullableTransformer',
 						'arguments' => [
-							[
-								'transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer',
-							],
+							['transformer' => 'Thiagorb\ServiceGeneratorRuntime\Transformers\PrimitiveTransformer'],
 						],
+						'encodedName' => 'page',
 					],
 				],
 				'exceptions' => [],

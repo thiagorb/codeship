@@ -40,31 +40,31 @@ class Project
 	/** @var ?string */
 	protected $updatedAt;
 
-	/** @var ?int[] */
+	/** @var int[]|null */
 	protected $teamIds;
 
 	/** @var ?string */
 	protected $branchMatch;
 
-	/** @var ?string[] */
+	/** @var string[]|null */
 	protected $branches;
 
 	/** @var ?bool */
 	protected $buildOnPrOnly;
 
-	/** @var ?string[] */
+	/** @var string[]|null */
 	protected $setupCommands;
 
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[]|null */
 	protected $deploymentPipelines;
 
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[]|null */
 	protected $environmentVariables;
 
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[]|null */
 	protected $testPipelines;
 
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[]|null */
 	protected $notificationRules;
 
 
@@ -81,15 +81,15 @@ class Project
 	 * @param ?string $aesKey
 	 * @param ?string $createdAt
 	 * @param ?string $updatedAt
-	 * @param ?int[] $teamIds
+	 * @param int[]|null $teamIds
 	 * @param ?string $branchMatch
-	 * @param ?string[] $branches
+	 * @param string[]|null $branches
 	 * @param ?bool $buildOnPrOnly
-	 * @param ?string[] $setupCommands
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[] $deploymentPipelines
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[] $environmentVariables
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[] $testPipelines
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[] $notificationRules
+	 * @param string[]|null $setupCommands
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[]|null $deploymentPipelines
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[]|null $environmentVariables
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[]|null $testPipelines
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[]|null $notificationRules
 	 */
 	public function __construct(
 		?string $uuid,
@@ -379,7 +379,7 @@ class Project
 
 
 	/**
-	 * @return ?int[]
+	 * @return int[]|null
 	 */
 	public function getTeamIds(): ?array
 	{
@@ -388,7 +388,7 @@ class Project
 
 
 	/**
-	 * @param ?int[] $teamIds
+	 * @param int[]|null $teamIds
 	 */
 	public function withTeamIds(?array $teamIds): self
 	{
@@ -419,7 +419,7 @@ class Project
 
 
 	/**
-	 * @return ?string[]
+	 * @return string[]|null
 	 */
 	public function getBranches(): ?array
 	{
@@ -428,7 +428,7 @@ class Project
 
 
 	/**
-	 * @param ?string[] $branches
+	 * @param string[]|null $branches
 	 */
 	public function withBranches(?array $branches): self
 	{
@@ -459,7 +459,7 @@ class Project
 
 
 	/**
-	 * @return ?string[]
+	 * @return string[]|null
 	 */
 	public function getSetupCommands(): ?array
 	{
@@ -468,7 +468,7 @@ class Project
 
 
 	/**
-	 * @param ?string[] $setupCommands
+	 * @param string[]|null $setupCommands
 	 */
 	public function withSetupCommands(?array $setupCommands): self
 	{
@@ -479,7 +479,7 @@ class Project
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[]|null
 	 */
 	public function getDeploymentPipelines(): ?array
 	{
@@ -488,7 +488,7 @@ class Project
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[] $deploymentPipelines
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\DeploymentPipeline[]|null $deploymentPipelines
 	 */
 	public function withDeploymentPipelines(?array $deploymentPipelines): self
 	{
@@ -499,7 +499,7 @@ class Project
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[]|null
 	 */
 	public function getEnvironmentVariables(): ?array
 	{
@@ -508,7 +508,7 @@ class Project
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[] $environmentVariables
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\EnvironmentVariable[]|null $environmentVariables
 	 */
 	public function withEnvironmentVariables(?array $environmentVariables): self
 	{
@@ -519,7 +519,7 @@ class Project
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[]|null
 	 */
 	public function getTestPipelines(): ?array
 	{
@@ -528,7 +528,7 @@ class Project
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[] $testPipelines
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\TestPipeline[]|null $testPipelines
 	 */
 	public function withTestPipelines(?array $testPipelines): self
 	{
@@ -539,7 +539,7 @@ class Project
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[]|null
 	 */
 	public function getNotificationRules(): ?array
 	{
@@ -548,7 +548,7 @@ class Project
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[] $notificationRules
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\NotificationRule[]|null $notificationRules
 	 */
 	public function withNotificationRules(?array $notificationRules): self
 	{

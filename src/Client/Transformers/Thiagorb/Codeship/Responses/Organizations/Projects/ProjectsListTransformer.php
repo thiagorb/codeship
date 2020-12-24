@@ -20,6 +20,7 @@ class ProjectsListTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transfor
 				],
 			],
 			'nullable' => true,
+			'encodedName' => 'projects',
 		],
 	];
 }

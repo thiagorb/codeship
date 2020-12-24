@@ -10,6 +10,7 @@ class ReadTransformer extends \Thiagorb\ServiceGeneratorRuntime\Transformers\Imm
 		'deployPipeline' => [
 			'transformer' => 'Thiagorb\Codeship\Client\Transformers\Thiagorb\Codeship\Responses\Organizations\Projects\DeployPipelines\DeployPipelineTransformer',
 			'nullable' => false,
+			'encodedName' => 'deploy_pipeline',
 		],
 	];
 }

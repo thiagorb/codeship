@@ -4,12 +4,12 @@ namespace Thiagorb\Codeship\Responses\Organizations\Projects;
 
 class ProjectsList
 {
-	/** @var ?\Thiagorb\Codeship\Responses\Organizations\Projects\Project[] */
+	/** @var \Thiagorb\Codeship\Responses\Organizations\Projects\Project[]|null */
 	protected $projects;
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Project[] $projects
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Project[]|null $projects
 	 */
 	public function __construct(?array $projects)
 	{
@@ -18,7 +18,7 @@ class ProjectsList
 
 
 	/**
-	 * @return ?\Thiagorb\Codeship\Responses\Organizations\Projects\Project[]
+	 * @return \Thiagorb\Codeship\Responses\Organizations\Projects\Project[]|null
 	 */
 	public function getProjects(): ?array
 	{
@@ -27,7 +27,7 @@ class ProjectsList
 
 
 	/**
-	 * @param ?\Thiagorb\Codeship\Responses\Organizations\Projects\Project[] $projects
+	 * @param \Thiagorb\Codeship\Responses\Organizations\Projects\Project[]|null $projects
 	 */
 	public function withProjects(?array $projects): self
 	{
