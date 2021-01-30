@@ -3,6 +3,7 @@
 namespace Thiagorb\Codeship\Guzzle;
 
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
+use Thiagorb\ServiceGeneratorRuntime\Guzzle\RequestFactory;
 
 class Factory extends \Thiagorb\Codeship\Factory
 {
