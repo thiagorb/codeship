@@ -71,9 +71,22 @@ class Context extends Service
         }
     }
 
+    private function removeNulls(array $data): array
+    {
+        foreach ($data as $key => $value) {
+            if (is_null($value)) {
+                unset($data[$key]);
+            } else if (is_array($value)) {
+                $data[$key] = $this->removeNulls($value);
+            }
+        }
+
+        return $data;
+    }
+
     public function createRequest(string $httpMethod, string $path, array $data = []): RequestInterface
     {
-        return parent::createRequest($httpMethod, $path, $data)
+        return parent::createRequest($httpMethod, $path, $this->removeNulls($data))
             ->withHeader('Content-Type', 'application/json');
     }
 
