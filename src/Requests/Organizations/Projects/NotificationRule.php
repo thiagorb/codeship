@@ -31,8 +31,14 @@ class NotificationRule
 	 * @param string[]|null $buildStatuses
 	 * @param ?string $branchMatch
 	 */
-	public function __construct(?string $notifier, ?string $target, ?string $branch, ?array $options, ?array $buildStatuses, ?string $branchMatch)
-	{
+	public function __construct(
+		?string $notifier,
+		?string $target,
+		?string $branch,
+		?array $options,
+		?array $buildStatuses,
+		?string $branchMatch
+	) {
 		$this->notifier = $notifier;
 		$this->target = $target;
 		$this->branch = $branch;

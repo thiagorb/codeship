@@ -35,8 +35,15 @@ class DeployPipeline
 	 * @param ?string $createdAt
 	 * @param ?string $updatedAt
 	 */
-	public function __construct(?int $id, ?string $branch, ?string $matchMode, ?array $config, ?int $position, ?string $createdAt, ?string $updatedAt)
-	{
+	public function __construct(
+		?int $id,
+		?string $branch,
+		?string $matchMode,
+		?array $config,
+		?int $position,
+		?string $createdAt,
+		?string $updatedAt
+	) {
 		$this->id = $id;
 		$this->branch = $branch;
 		$this->matchMode = $matchMode;
