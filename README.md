@@ -4,7 +4,7 @@ A PHP Client to use the Codeship API.
 
 ## Requirements
 
-- PHP 7.1
+- PHP 7.1 or newer
 - Composer
 
 ## Installing
